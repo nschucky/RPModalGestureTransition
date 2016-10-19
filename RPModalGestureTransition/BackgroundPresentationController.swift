@@ -22,7 +22,7 @@ class BackgroundPresentationController: UIPresentationController {
     }
     
     func setupDimmingView() {
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: "dimmingViewTapped:")
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(BackgroundPresentationController.dimmingViewTapped(_:)))
         dimmingView = UIView()
         dimmingView.backgroundColor = UIColor.blackColor()
         dimmingView.addGestureRecognizer(tapRecognizer)

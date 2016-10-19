@@ -22,7 +22,7 @@ class InteractiveTransition: UIPercentDrivenInteractiveTransition {
         self.attachedViewController = attachedViewController
         
         let presentationPanGesture = UIPanGestureRecognizer()
-        presentationPanGesture.addTarget(self, action: "dismissalPanGesture:")
+        presentationPanGesture.addTarget(self, action: #selector(InteractiveTransition.dismissalPanGesture(_:)))
         attachedViewController.view.addGestureRecognizer(presentationPanGesture)
     }
     
